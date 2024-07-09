@@ -1,16 +1,14 @@
 import { Type } from 'class-transformer';
 import { IsString, ValidateNested } from 'class-validator';
-import { MailDto } from './mail/mail.dto';
-import { ReceiptDto } from './receipt/receipt.dto';
+import { SesDto } from './ses.dto';
 
 export class SesEventRecordDto {
-  @ValidateNested()
-  @Type(() => ReceiptDto)
-  receipt: ReceiptDto;
+  @IsString()
+  eventVersion: string;
 
   @ValidateNested()
-  @Type(() => MailDto)
-  mail: MailDto;
+  @Type(() => SesDto)
+  ses: SesDto;
 
   @IsString()
   eventSource: string;

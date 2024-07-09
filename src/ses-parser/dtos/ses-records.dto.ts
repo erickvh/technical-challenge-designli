@@ -4,7 +4,7 @@ import { SesEventRecordDto } from './ses-event-record.dto';
 
 export class SesRecordsDto {
   @IsArray()
-  @ValidateNested({ each: true })
+  @ValidateNested()
   @Type(() => SesEventRecordDto)
   Records: SesEventRecordDto[];
 }

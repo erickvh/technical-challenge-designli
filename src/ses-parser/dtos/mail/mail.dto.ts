@@ -2,7 +2,7 @@ import { Type } from 'class-transformer';
 import {
   IsArray,
   IsBoolean,
-  IsDate,
+  IsDateString,
   IsEmail,
   IsString,
   ValidateNested,
@@ -11,7 +11,7 @@ import { CommonHeadersDto } from './common-headers.dto';
 import { HeaderDto } from './header.dto';
 
 export class MailDto {
-  @IsDate()
+  @IsDateString()
   timestamp: Date;
 
   @IsEmail()
