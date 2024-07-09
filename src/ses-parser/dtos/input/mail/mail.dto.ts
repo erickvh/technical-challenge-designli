@@ -12,7 +12,7 @@ import { HeaderDto } from './header.dto';
 
 export class MailDto {
   @IsDateString()
-  timestamp: Date;
+  timestamp: string;
 
   @IsEmail()
   source: string;

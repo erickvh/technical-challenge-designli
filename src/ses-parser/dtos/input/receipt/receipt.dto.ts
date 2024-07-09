@@ -10,7 +10,7 @@ import { VerdictDto } from './verdict.dto';
 
 export class ReceiptDto {
   @IsDateString()
-  timestamp: Date;
+  timestamp: string;
 
   @IsInt()
   processingTimeMillis: number;

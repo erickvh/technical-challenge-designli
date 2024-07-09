@@ -1,10 +1,16 @@
 import { Body, Controller, Post } from '@nestjs/common';
-import { SesRecordsDto } from './dtos/ses-records.dto';
+import { SesRecordsDto } from './dtos/input/ses-records.dto';
+import { HumanizedSesDto } from './dtos/output/humanized-ses.dto';
+import { SimpleEmailReceiptService } from './services/simple-email-receipt.service';
 
-@Controller('ses-parser')
+@Controller('ses-events-parser')
 export class SimpleEmailReceiptController {
+  constructor(
+    private readonly simpleEmailReceiptService: SimpleEmailReceiptService,
+  ) {}
+
   @Post()
-  async getParsedEmail(@Body() sesRecords: SesRecordsDto) {
-    return sesRecords;
+  getPasesSesEvents(@Body() sesRecords: SesRecordsDto): HumanizedSesDto[] {
+    return this.simpleEmailReceiptService.parseSesEvents(sesRecords);
   }
 }
