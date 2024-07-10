@@ -30,6 +30,7 @@ yarn start:dev
 
 You can take a look at the API documentation by running the application and visiting the `/api` endpoint.
 [http://localhost:3000/docs](http://localhost:3000/docs)
+[https://take-home-challenge-beta.vercel.app/docs](https://take-home-challenge-beta.vercel.app/docs)
 
 #### Challenge
 
