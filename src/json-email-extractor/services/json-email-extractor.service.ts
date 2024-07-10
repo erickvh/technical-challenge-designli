@@ -18,16 +18,21 @@ export class JsonEmailExtractorService {
       responseType: 'arraybuffer',
     });
 
-    const _parsedEmail = await simpleParser(emailBuffer);
+    const parsedEmail = await simpleParser(emailBuffer);
 
-    const strategies = this.strategies.filter((strategy) =>
-      strategy.isValidStrategy(_parsedEmail),
+    const strategies = await Promise.all(
+      this.strategies.map(async (strategy) => ({
+        isValid: await strategy.isValidStrategy(parsedEmail),
+        strategy,
+      })),
     );
+
+    const validStrategies = strategies.filter(({ isValid }) => isValid);
 
     const jsonObjects = await Promise.all(
-      strategies.map((strategy) => strategy.getJson(_parsedEmail)),
+      validStrategies.map(({ strategy }) => strategy.getJson(parsedEmail)),
     );
 
-    return jsonObjects.flat();
+    return jsonObjects;
   }
 }

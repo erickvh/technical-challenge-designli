@@ -5,8 +5,13 @@ import { JsonEmailExtractorController } from './json-email-extractor.controller'
 import { JsonEmailExtractorService } from './services/json-email-extractor.service';
 import { ExtractFromAttachmentStrategy } from './strategies/extract-from-attachent.strategy';
 import { ExtractFromJsonLinkStrategy } from './strategies/extract-from-json-link.strategy';
+import { ExtractFromWebPageStrategy } from './strategies/extract-from-webpage.strategy';
 
-const strategies = [ExtractFromAttachmentStrategy, ExtractFromJsonLinkStrategy];
+const strategies = [
+  ExtractFromAttachmentStrategy,
+  ExtractFromJsonLinkStrategy,
+  ExtractFromWebPageStrategy,
+];
 
 const customJsonStrategiesProvider = {
   provide: JSON_EXTRACT_STRATEGIES_PROVIDER,

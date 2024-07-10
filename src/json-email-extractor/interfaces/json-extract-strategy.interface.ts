@@ -1,11 +1,7 @@
 import { ParsedMail } from 'mailparser';
+import { SourceEnum } from '../enum/source.enum';
 
 export type JsonObject = { [key: string]: unknown };
-export enum SourceEnum {
-  ATTACHMENT = 'attachment',
-  LINK = 'json-link',
-  WEBPAGE = 'webpage',
-}
 
 type AtLeastOne<T> = {
   [K in keyof T]-?: Partial<T> & Pick<T, K>;
@@ -16,5 +12,5 @@ export type ExtractedJson = AtLeastOne<{
 }>;
 export interface IJsonExtractStrategy {
   getJson(parsedEmail: ParsedMail): Promise<ExtractedJson>;
-  isValidStrategy(parsedEmail: ParsedMail): boolean;
+  isValidStrategy(parsedEmail: ParsedMail): boolean | Promise<boolean>;
 }
