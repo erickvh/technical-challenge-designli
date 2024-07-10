@@ -1,0 +1,36 @@
+MIME-Version: 1.0
+Date: Tue, 9 Jul 2024 22:41:24 -0600
+Message-ID: <CADO6ZQPiKz0AxZeeZk+hKTrD0Qnjw7H7Z3+SdMTTYU1=6utAWw@mail.gmail.com>
+Subject: Sending a json to myself as attachment
+From: Erick Ventura <erick94111@gmail.com>
+To: Erick Ventura <erick94111@gmail.com>
+Content-Type: multipart/mixed; boundary="00000000000043f931061cdd4270"
+
+--00000000000043f931061cdd4270
+Content-Type: multipart/alternative; boundary="00000000000043f92f061cdd426e"
+
+--00000000000043f92f061cdd426e
+Content-Type: text/plain; charset="UTF-8"
+
+Test body
+
+--00000000000043f92f061cdd426e
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Test body</div>
+
+--00000000000043f92f061cdd426e--
+--00000000000043f931061cdd4270
+Content-Type: application/json; name="post.json"
+Content-Disposition: attachment; filename="post.json"
+Content-Transfer-Encoding: base64
+X-Attachment-Id: f_lyfcrkrl0
+Content-ID: <f_lyfcrkrl0>
+
+ewogICJ1c2VySWQiOiAxLAogICJpZCI6IDEsCiAgInRpdGxlIjogInN1bnQgYXV0IGZhY2VyZSBy
+ZXBlbGxhdCBwcm92aWRlbnQgb2NjYWVjYXRpIGV4Y2VwdHVyaSBvcHRpbyByZXByZWhlbmRlcml0
+IiwKICAiYm9keSI6ICJxdWlhIGV0IHN1c2NpcGl0XG5zdXNjaXBpdCByZWN1c2FuZGFlIGNvbnNl
+cXV1bnR1ciBleHBlZGl0YSBldCBjdW1cbnJlcHJlaGVuZGVyaXQgbW9sZXN0aWFlIHV0IHV0IHF1
+YXMgdG90YW1cbm5vc3RydW0gcmVydW0gZXN0IGF1dGVtIHN1bnQgcmVtIGV2ZW5pZXQgYXJjaGl0
+ZWN0byIKfQ==
+--00000000000043f931061cdd4270--
