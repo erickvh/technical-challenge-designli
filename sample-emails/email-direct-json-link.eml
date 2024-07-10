@@ -1,0 +1,21 @@
+MIME-Version: 1.0
+Date: Tue, 9 Jul 2024 22:52:14 -0600
+Message-ID: <CADO6ZQMTJ9NAHGqJYRQ_-_BOtL05K=vnojYU0YrXRm_0Y-HUrA@mail.gmail.com>
+Subject: Sending a json to myself in a body link
+From: Erick Ventura <erick94111@gmail.com>
+To: Erick Ventura <erick94111@gmail.com>
+Content-Type: multipart/alternative; boundary="000000000000fa6a3d061cdd6878"
+
+--000000000000fa6a3d061cdd6878
+Content-Type: text/plain; charset="UTF-8"
+
+Hey this the sample json file
+json-dummy-data
+<https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json>
+
+--000000000000fa6a3d061cdd6878
+Content-Type: text/html; charset="UTF-8"
+
+<div dir="ltr">Hey this the sample json file<br><a href="https://microsoftedge.github.io/Demos/json-dummy-data/64KB.json">json-dummy-data</a><br><br></div>
+
+--000000000000fa6a3d061cdd6878--
