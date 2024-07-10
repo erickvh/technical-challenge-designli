@@ -3,7 +3,10 @@ import { simpleParser } from 'mailparser';
 import { CustomHttpService } from '../../shared/services/custom-http.service';
 import { JSON_EXTRACT_STRATEGIES_PROVIDER } from '../constants/custom-provider.constant';
 import { EmailPathDto } from '../dtos/input/email-path.dto';
-import { IJsonExtractStrategy } from '../interfaces/json-extract-strategy.interface';
+import {
+  ExtractedJson,
+  IJsonExtractStrategy,
+} from '../interfaces/json-extract-strategy.interface';
 
 @Injectable()
 export class JsonEmailExtractorService {
@@ -33,6 +36,9 @@ export class JsonEmailExtractorService {
       validStrategies.map(({ strategy }) => strategy.getJson(parsedEmail)),
     );
 
-    return jsonObjects;
+    return jsonObjects.reduce(
+      (acc, curr) => ({ ...acc, ...curr }),
+      {},
+    ) as ExtractedJson;
   }
 }
