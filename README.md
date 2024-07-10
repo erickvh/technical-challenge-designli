@@ -29,7 +29,7 @@ yarn start:dev
 - POST /json-email-extractor (Real challenge)
 
 You can take a look at the API documentation by running the application and visiting the `/api` endpoint.
-[http://localhost:3000/api](http://localhost:3000/api)
+[http://localhost:3000/docs](http://localhost:3000/docs)
 
 #### Challenge
 
@@ -170,9 +170,9 @@ The solution to this problem can be found in the `src/json-email-extractor` dire
 
 In order to simplify the sample data, we should use the following `.eml` files to test the endpoint:
 
-- [Email with json attachment]('https://raw.githubusercontent.com/erickvh/technical-challenge-designli/feature/json-extractor-from-email-file/sample-emails/email-json-attached.eml')
-- [Email with url to json attachment]('https://raw.githubusercontent.com/erickvh/technical-challenge-designli/feature/json-extractor-from-email-file/sample-emails/email-page-with-json.eml')
-- [Email with web page with json files]('https://raw.githubusercontent.com/erickvh/technical-challenge-designli/feature/json-extractor-from-email-file/sample-emails/email-page-with-json.eml')
+- [Email with json attachment](https://raw.githubusercontent.com/erickvh/technical-challenge-designli/feature/json-extractor-from-email-file/sample-emails/email-json-attached.eml)
+- [Email with url to json attachment](https://raw.githubusercontent.com/erickvh/technical-challenge-designli/feature/json-extractor-from-email-file/sample-emails/email-page-with-json.eml)
+- [Email with web page with json files](https://raw.githubusercontent.com/erickvh/technical-challenge-designli/feature/json-extractor-from-email-file/sample-emails/email-page-with-json.eml)
 
 The solution proposed for this problem is to return the json values for each concern also in case the email has a json file attached or a link to a json file, the solution should return the json values for each concern.
 
